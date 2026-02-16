@@ -21,5 +21,8 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+        cache-dependency-path: 'UAT-Automation/package-lock.json'
     - run: npm install
+      working-directory: UAT-Automation
     - run: npm run test:api
+      working-directory: UAT-Automation
