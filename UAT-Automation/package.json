@@ -1,0 +1,23 @@
+{
+  "name": "uat-automation",
+  "version": "1.0.0",
+  "description": "QA Automation project for login testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "cucumber-js",
+    "test:ui": "cucumber-js --require tests/ui/step_definitions/*.js tests/ui/features",
+    "test:api": "mocha tests/api/api-tests.js --reporter spec",
+    "report": "allure generate allure-results --clean && allure open"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "selenium-webdriver": "^4.20.0",
+    "@cucumber/cucumber": "^10.0.1",
+    "allure-cucumberjs": "^2.10.0",
+    "allure-mocha": "^2.10.0",
+    "axios": "^1.6.2",
+    "chai": "^4.3.10",
+    "mocha": "^10.2.0"
+  }
+}

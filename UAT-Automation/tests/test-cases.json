@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "name": "Successful login UI",
+    "steps": [
+      "Navigate to https://the-internet.herokuapp.com/login",
+      "Enter valid username and password",
+      "Click login button",
+      "Verify success message 'You logged into a secure area!'"
+    ],
+    "testData": {
+      "username": "tomsmith",
+      "password": "SuperSecretPassword"
+    },
+    "execution": "Automated with Selenium and Cucumber"
+  },
+  {
+    "id": 2,
+    "name": "Invalid login UI",
+    "steps": [
+      "Navigate to https://the-internet.herokuapp.com/login",
+      "Enter invalid username or password",
+      "Click login button",
+      "Verify error message 'Your username is invalid!'"
+    ],
+    "testData": {
+      "username": "wrong",
+      "password": "wrong"
+    },
+    "execution": "Automated with Selenium and Cucumber"
+  },
+  {
+    "id": 3,
+    "name": "Successful login API",
+    "steps": [
+      "Send POST request to https://dummyjson.com/auth/login with valid username and password",
+      "Verify response status 200 and accessToken in response"
+    ],
+    "testData": {
+      "username": "emilys",
+      "password": "emilyspass"
+    },
+    "execution": "Automated with Axios and Mocha"
+  },
+  {
+    "id": 4,
+    "name": "Invalid login API",
+    "steps": [
+      "Send POST request to https://dummyjson.com/auth/login with invalid username and password",
+      "Verify response status 400 and error message"
+    ],
+    "testData": {
+      "username": "wrong",
+      "password": "wrong"
+    },
+    "execution": "Automated with Axios and Mocha"
+  }
+]

@@ -1,0 +1,7 @@
+node_modules/
+node-v20.11.0-darwin-x64/
+node-v20.11.0-darwin-x64.tar.gz
+*.log
+allure-results/
+reports/
+.DS_Store
