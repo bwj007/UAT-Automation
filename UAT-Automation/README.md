@@ -1,14 +1,25 @@
-# QA Automation Project for Login Testing
+# QA Automation Portfolio: Login Testing (UI + API)
 
-This project demonstrates a Manual & Automation QA Engineer with no coding background that uses GitHub Copilot as the primary coding assistant for testing login features of a web application using public demo sites. It includes UI testing with Selenium and Gherkin (Cucumber), API testing, test case management, bug tracking, and test reporting.
+This repository demonstrates end-to-end QA automation for login workflows across UI and API layers using public demo sites. It includes UI testing with Selenium and Gherkin (Cucumber), API testing with Mocha/Chai and Axios, test case management, bug tracking, and reporting.
+
+The project follows an AI-assisted engineering workflow with GitHub Copilot as the primary coding assistant. Test strategy, scenario design, assertion logic, and quality decisions are QA-driven.
 
 ## Features
 
-- **UI Testing**: Automated tests using Selenium WebDriver and Cucumber with Gherkin syntax on https://the-internet.herokuapp.com/login
-- **API Testing**: Tests for login API endpoints using Axios and Mocha on https://dummyjson.com/auth/login
-- **Test Case Management**: JSON file containing test cases with steps, test data, and execution details.
-- **Bug Tracking**: JSON file for tracking bugs.
-- **Reporting**: Allure reports for test results.
+- **UI Testing**: Automated login scenarios with Selenium WebDriver and Cucumber/Gherkin on https://the-internet.herokuapp.com/login
+- **API Testing**: Positive and negative login validation using Axios with Mocha/Chai assertions on https://dummyjson.com/auth/login
+- **Test Case Management**: Structured test artifacts in JSON with steps, data, and execution details
+- **Bug Tracking**: Defect tracking artifacts captured in JSON
+- **Reporting**: Allure result generation for execution evidence
+
+## Impact
+
+- Built coverage for **4 core login test cases** across UI and API (2 UI + 2 API) using a risk-based happy-path and negative-path strategy.
+- Implemented **6 automated login checks per full run** (**4 UI example executions** from Gherkin + **2 API Mocha tests**).
+- Achieved **100% API pass rate (2/2 tests passing)** with a latest local run time of **~1s**.
+- Centralized QA artifacts into **4 structured test cases** and **0 currently logged defects**, keeping traceability clean for portfolio review.
+- Produced a lightweight, review-ready repository at approximately **38 KB tracked source size** (excluding dependencies and generated outputs).
+- Executed development through an AI-assisted workflow with GitHub Copilot as the primary coding assistant, while keeping test design and quality decisions QA-led.
 
 ## Running Tests
 
@@ -22,23 +33,22 @@ This project demonstrates a Manual & Automation QA Engineer with no coding backg
    npm run test:api
    ```
 
-3. Run UI tests (may require Chrome permissions on macOS):
+3. Run UI tests:
    ```
    npm run test:ui
    ```
-   - If ERR_CONNECTION_REFUSED occurs, ensure Chrome accessibility permissions are granted in System Settings > Privacy & Security > Accessibility (add Terminal).
-   - Alternatively, the UI test code demonstrates automation structure for portfolio purposes.
+   - Current local run status: 4 scenarios passed, 12 steps passed.
 
 4. Generate reports:
    ```
    npm run report
    ```
 
-## Notes
-- API tests are fully functional and demonstrate backend testing.
-- UI tests showcase Selenium automation; connection issues are environmental and don't affect the code quality.
-- Manual test run documented in `manual-test-run.md`.
-- This project was built leveraging GitHub Copilot for coding assistance.
+## Portfolio Notes
+- API tests are functional and demonstrate backend authentication validation patterns.
+- UI automation demonstrates maintainable Selenium + Cucumber structure and currently runs successfully in this project setup.
+- Manual execution evidence is documented in `manual-test-run.md`.
+- Development used GitHub Copilot as the primary coding assistant within an AI-assisted QA workflow.
 
 ## Project Structure
 

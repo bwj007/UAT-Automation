@@ -2,7 +2,6 @@
   "name": "uat-automation",
   "version": "1.0.0",
   "description": "QA Automation project for login testing",
-  "main": "index.js",
   "scripts": {
     "test": "cucumber-js",
     "test:ui": "cucumber-js --require tests/ui/step_definitions/*.js tests/ui/features",
