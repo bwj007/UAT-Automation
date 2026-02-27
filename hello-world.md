@@ -1,1 +1,0 @@
-# I am learning coding and its pretty cool! Check this out!
